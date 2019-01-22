@@ -94,8 +94,8 @@ RUN apt-add-repository ppa:brightbox/ruby-ng \
 	iptables lxc fontconfig libffi-dev build-essential git python-dev libssl-dev python-pip \
 	&& rm -rf /var/lib/apt/lists/*
 
-# Install httpie (with SNI), awscli, docker-compose
-RUN pip install --upgrade pyopenssl pyasn1 ndg-httpsclient httpie awscli docker-compose
+# Install httpie (with SNI), awscli, docker-compose 
+RUN pip install virtualenv --upgrade pyopenssl pyasn1 ndg-httpsclient httpie awscli docker-compose
 RUN ruby-switch --set ruby2.1
 RUN npm install -g bower grunt-cli
 RUN gem install rake bundler compass --no-ri --no-rdoc
