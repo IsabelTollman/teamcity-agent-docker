@@ -90,14 +90,14 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
 RUN apt-add-repository ppa:brightbox/ruby-ng \
 	&& apt-get update \
     && apt-get upgrade -y \
-	&& DEBIAN_FRONTEND=noninteractive apt-get install -y ruby2.3.0 ruby2.3.0-dev ruby ruby-switch unzip \
+	&& DEBIAN_FRONTEND=noninteractive apt-get install -y ruby2.3 ruby2.3-dev ruby ruby-switch unzip \
 	iptables lxc fontconfig libffi-dev build-essential git python-dev libssl-dev python-pip \
 	&& rm -rf /var/lib/apt/lists/*
 
 # Install httpie (with SNI), awscli, docker-compose (pip install virtualenv --upgrade; pip install setuptools==18.5; pip install setuptools --upgrade --ignore-installed)
 RUN pip install setuptools==18.5
 RUN pip install --upgrade pyopenssl pyasn1 ndg-httpsclient httpie awscli docker-compose==1.6.0
-RUN ruby-switch --set ruby2.1
+RUN ruby-switch --set ruby2.3
 RUN npm install -g bower grunt-cli
 RUN gem install rake bundler compass --no-ri --no-rdoc
 
