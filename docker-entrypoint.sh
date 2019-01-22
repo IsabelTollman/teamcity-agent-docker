@@ -21,6 +21,6 @@ if [ ! -d "$AGENT_DIR/bin" ]; then
 fi
 
 echo "Starting buildagent..."
-chown -R sleepy_kirch:teamcity /opt/buildAgent
+chown -R teamcity:teamcity /opt/buildagent
 
 wrapdocker gosu teamcity /opt/buildAgent/bin/agent.sh run
