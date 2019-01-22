@@ -29,7 +29,7 @@ RUN echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-s
 	&& echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections \
 	&& add-apt-repository -y ppa:webupd8team/java \
 	&& apt-get update \
-  	&& apt-get install -y --no-install-recommends \
+  	&& DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
       oracle-java8-installer ca-certificates-java \
   	&& rm -rf /var/lib/apt/lists/* /var/cache/oracle-jdk8-installer/*.tar.gz /usr/lib/jvm/java-8-oracle/src.zip /usr/lib/jvm/java-8-oracle/javafx-src.zip \
       /usr/lib/jvm/java-8-oracle/jre/lib/security/cacerts \
@@ -90,7 +90,7 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
 RUN apt-add-repository ppa:brightbox/ruby-ng \
 	&& apt-get update \
     && apt-get upgrade -y \
-	&& apt-get install -y ruby2.1 ruby2.1-dev ruby ruby-switch unzip \
+	&& DEBIAN_FRONTEND=noninteractive apt-get install -y ruby2.1 ruby2.1-dev ruby ruby-switch unzip \
 	iptables lxc fontconfig libffi-dev build-essential git python-dev libssl-dev python-pip \
 	&& rm -rf /var/lib/apt/lists/*
 
