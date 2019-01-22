@@ -1,6 +1,6 @@
 #!/bin/bash
-if [ -z "$TEAMCITY_SERVER" ]; then
-    echo "TEAMCITY_SERVER variable not set, launch with -e TEAMCITY_SERVER=http://172.18.0.2:8111/"
+if [ -z "$http://140.82.33.117/" ]; then
+    echo "TEAMCITY_SERVER variable not set, launch with -e TEAMCITY_SERVER=http://mybuildserver"
     exit 1
 fi
 
