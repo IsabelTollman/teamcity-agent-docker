@@ -3,7 +3,7 @@ FROM ubuntu:14.04
 ENV AGENT_DIR  /opt/buildAgent
 
 RUN apt-get update \
-	&& apt-get install -y --no-install-recommends \
+	&& DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
 		lxc iptables aufs-tools ca-certificates curl wget software-properties-common language-pack-en \
 	&& rm -rf /var/lib/apt/lists/*
 
