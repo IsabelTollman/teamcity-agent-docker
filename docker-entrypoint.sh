@@ -21,11 +21,11 @@ if [ ! -d "$AGENT_DIR/bin" ]; then
 fi
 
 echo "Starting buildagent..."
-ls -lart /opt/buildagent
-chown -R teamcity:teamcity /opt/buildagent
+# ls -lart /opt/buildagent
+chown -R root:root /opt/buildagent
 # chmod +x ./docker-entrypoint.sh
 
 # ls -la /usr/local/bin/docker-entrypoint.sh 
-# ls -la wrapdocker
-wrapdocker gosu teamcity /opt/buildAgent/bin/agent.sh run
+ls -la wrapdocker
+wrapdocker gosu teamcity /opt/buildagent/bin/agent.sh run
 # exec "wrapdocker gosu root /opt/buildagent/bin/agent.sh run" # agent.sh # root # run
