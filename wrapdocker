@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo "In wrapdocker file"
 wrapdocker gosu root /opt/buildagent/bin/agent.sh run # removed from docker-entrypoint.sh and placed here
 
 # Ensure that all nodes in /dev/mapper correspond to mapped devices currently loaded by the device-mapper kernel driver
