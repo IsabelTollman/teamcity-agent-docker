@@ -24,4 +24,4 @@ echo "Starting buildagent..."
 # ls -lart /opt/buildagent
 chown -R root:root /opt/buildagent
 
-wrapdocker gosu root /opt/buildagent/bin/agent.sh run
+wrapdocker gosu root /opt/buildAgent/bin/agent.sh run
