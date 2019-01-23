@@ -23,7 +23,7 @@ fi
 echo "Starting buildagent..."
 # ls -lart /opt/buildagent
 chown -R root:root /opt/buildagent
-# chmod +x /usr/local/bin/docker-entrypoint.sh
+chmod +x ./docker-entrypoint.sh
 
 # ls -la /usr/local/bin/docker-entrypoint.sh 
 wrapdocker gosu root /opt/buildagent/bin/agent.sh run # agent.sh
