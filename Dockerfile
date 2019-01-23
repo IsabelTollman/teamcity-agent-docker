@@ -101,7 +101,7 @@ RUN ruby-switch --set ruby2.3
 RUN npm install -g bower grunt-cli
 RUN gem install rake bundler compass --no-ri --no-rdoc
 
-RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
 
 # Install the magic wrapper.
 ADD wrapdocker /usr/local/bin/wrapdocker
