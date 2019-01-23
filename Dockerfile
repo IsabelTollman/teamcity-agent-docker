@@ -107,6 +107,7 @@ ADD docker-entrypoint.sh /docker-entrypoint.sh
 ADD wrapdocker /usr/local/bin/wrapdocker
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
+ENTRYPOINT ["/wrapdocker"]
 
 VOLUME /var/lib/docker
 VOLUME /opt/buildAgent
