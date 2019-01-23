@@ -102,7 +102,8 @@ RUN npm install -g bower grunt-cli
 RUN gem install rake bundler compass --no-ri --no-rdoc
 
 # Install the magic wrapper.
-ADD wrapdocker /usr/local/bin/wrapdocker /docker-entrypoint.sh
+ADD ./wrapdocker /usr/local/bin/wrapdocker
+RUN chmod +x /usr/local/bin/wrapdocker
 # /usr/local/bin/wrapdocker /docker-entrypoint.sh
 ADD docker-entrypoint.sh /docker-entrypoint.sh
 
@@ -111,6 +112,7 @@ ENTRYPOINT ["/docker-entrypoint.sh"]
 # RUN wrapdocker
 
 VOLUME /var/lib/docker
+CMD ["wrapdocker"]
 VOLUME /opt/buildAgent
 
 
