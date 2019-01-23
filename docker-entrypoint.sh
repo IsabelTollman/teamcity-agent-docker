@@ -27,4 +27,4 @@ chmod +x ./docker-entrypoint.sh
 
 # ls -la /usr/local/bin/docker-entrypoint.sh 
 # ls -la wrapdocker
-exec "wrapdocker gosu root /opt/buildagent/bin/agent.sh" # agent.sh # root # run
+# exec "wrapdocker gosu root /opt/buildagent/bin/agent.sh run" # agent.sh # root # run
