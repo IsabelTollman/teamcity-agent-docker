@@ -21,7 +21,7 @@ if [ ! -d "$AGENT_DIR/bin" ]; then
 fi
 
 echo "Starting buildagent..."
-# ls -lart /opt/buildagent
+ls -lart /opt/buildagent
 chown -R teamcity:teamcity /opt/buildagent
 # chmod +x ./docker-entrypoint.sh
 
