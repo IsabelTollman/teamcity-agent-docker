@@ -26,4 +26,4 @@ chown -R root:root /opt/buildagent
 # chmod +x /usr/local/bin/docker-entrypoint.sh
 
 # ls -la /usr/local/bin/docker-entrypoint.sh 
-IsabelTollman/teamcity-agent-docker/wrapdocker gosu root /opt/buildagent/bin/agent.sh run # agent.sh
+/IsabelTollman/teamcity-agent-docker/wrapdocker gosu root /opt/buildagent/bin/agent.sh run # agent.sh
