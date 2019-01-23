@@ -107,8 +107,8 @@ ADD docker-entrypoint.sh /docker-entrypoint.sh
 ADD wrapdocker /usr/local/bin/wrapdocker
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
-RUN wrapdocker gosu root /opt/buildagent/bin/agent.sh 
-# CMD ["/wrapdocker"]
+# RUN wrapdocker gosu root /opt/buildagent/bin/agent.sh 
+ENTRYPOINT ["/wrapdocker"]
 
 VOLUME /var/lib/docker
 VOLUME /opt/buildAgent
