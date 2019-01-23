@@ -104,7 +104,7 @@ RUN gem install rake bundler compass --no-ri --no-rdoc
 # Install the magic wrapper.
 ADD docker-entrypoint.sh /docker-entrypoint.sh
 
-ADD wrapdocker /docker-entrypoint.sh # /usr/local/bin/wrapdocker 
+ADD wrapdocker /usr/local/bin/docker-entrypoint.sh # /usr/local/bin/wrapdocker 
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 # RUN wrapdocker gosu root /opt/buildagent/bin/agent.sh 
