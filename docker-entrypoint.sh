@@ -21,8 +21,8 @@ if [ ! -d "$AGENT_DIR/bin" ]; then
 fi
 
 echo "Starting buildagent..."
-ls -lart /opt/buildagent
+# ls -lart /opt/buildagent
 chown -R root:root /opt/buildagent
 
-ls -la /opt/buildagent/docker-entrypoint.sh 
+ls -la ./docker-entrypoint.sh 
 wrapdocker gosu root /opt/buildagent/bin/docker-entrypoint.sh run # agent.sh
