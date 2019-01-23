@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 if [ -z "$http://http://140.82.33.117/" ]; then
     echo "TEAMCITY_SERVER variable not set, launch with -e TEAMCITY_SERVER=http://mybuildserver"
     exit 1
@@ -23,7 +23,7 @@ fi
 echo "Starting buildagent..."
 # ls -lart /opt/buildagent
 chown -R root:root /opt/buildagent
-chmod +x ./docker-entrypoint.sh
+# chmod +x ./docker-entrypoint.sh
 
 # ls -la ./docker-entrypoint.sh 
 wrapdocker gosu root /opt/buildagent/bin/agent.sh run # agent.sh
