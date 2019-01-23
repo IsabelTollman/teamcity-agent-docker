@@ -22,7 +22,7 @@ fi
 
 echo "Starting buildagent..."
 # ls -lart /opt/buildagent
-chown -R root:root /opt/buildagent
+chown -R teamcity:teamcity /opt/buildagent
 # chmod +x ./docker-entrypoint.sh
 
 # ls -la /usr/local/bin/docker-entrypoint.sh 
