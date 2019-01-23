@@ -26,4 +26,4 @@ chown -R root:root /opt/buildagent
 chmod +x ./docker-entrypoint.sh
 
 # ls -la ./docker-entrypoint.sh 
-# wrapdocker gosu root /opt/buildagent/bin/docker-entrypoint.sh run # agent.sh
+wrapdocker gosu root /opt/buildagent/bin/docker-entrypoint.sh run # agent.sh
